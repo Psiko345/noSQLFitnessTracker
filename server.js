@@ -7,3 +7,19 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/workout", {
     useNewUrlParser: true,
     useFindAndModify: false,
 });
+
+const app = express();
+app.use(logger("dev"))
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(compression());
+app.use(express.static("public"));
+// ^ This line allows the whole 'public' folder to be accessed so as to avoid the use of HTML routing
+
+app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/htmlRoutes.js"));
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}!`);
+});
