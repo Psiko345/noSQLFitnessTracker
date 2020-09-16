@@ -6,7 +6,6 @@
 
 A workout tracker has a Mongo database with a Mongoose schema and handles routes with Express.
 
-![Tracker](./assets/img/tracker.png)
 To see it in action, [here](https://youtu.be/0nLXJkGgE_c) is a youtube link. 
 OR
 Please visit the deployed link on [Heroku](https://pacific-atoll-54942.herokuapp.com).
