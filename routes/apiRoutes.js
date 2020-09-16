@@ -36,4 +36,16 @@ module.exports = function (app) {
                 res.json(err)
             })
     )
+
+    app.get("/api/workouts/range", (req, res) => {
+        Workout.find({})
+            .sort({ day: -1 })
+            .limit(7)
+            .then((dbWorkouts) => {
+                res.json(dbWorkouts);
+            })
+            .catch((err) => {
+                res.json(err);
+            });
+    });
 }
