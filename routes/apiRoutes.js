@@ -1,3 +1,4 @@
+const express = require("express");
 const Workout = require("../models/workout")
 
 module.exports = function (app) {
@@ -14,7 +15,9 @@ module.exports = function (app) {
 
     app.post("/api/workouts", function (req, res) {
         Workout.create({})
-            .then(data => res.json(data))
+            .then(data => {
+                res.json(data)
+            })
             .catch(err => {
                 console.log("err", err)
                 res.json(err)
