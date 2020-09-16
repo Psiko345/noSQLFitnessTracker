@@ -36,7 +36,7 @@ The user should be able to:
 
 - Add new exercises to a new workout plan.
 
-- View multiple the combined weight of multiple exercises on the `stats` page.
+- View multiple the combined weight of multiple exercises on the `Workout Dashboard` page.
 
 ```
 As a user, I want to be able to view create and track daily workouts.
