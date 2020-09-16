@@ -1,7 +1,7 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "nosqlfitnesstracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "A fitness tracker app utilizing mongodb via mongoose.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "",
+  "author": "Joshua Piper",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
